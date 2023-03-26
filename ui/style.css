@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap');
+
+body{
+	color: white;
+	user-select: none;
+	overflow: hidden;
+	margin: 0;
+}
+
+/* Vehicles Info */
+
+#title-container{
+	display: none;
+	font-family: "Barlow Condensed", sans-serif;
+	width: 97%;
+	height: 30%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+}
+#title-vehicleinfo{
+	padding: 50px 50px 50px 68px;
+	text-transform: uppercase;
+}
+#title-vehiclename{
+	font-family: 'Barlow Condensed', sans-serif;
+
+
+	text-shadow: 3px 3px 6px rgba(0,0,0,0.69);
+	font-size: 4.0rem;
+}
+#title-vehiclecategory{
+	font-size: 2.0rem;
+	color: #0066ff;
+	margin-top: -15px;
+}
+#title-stock,#title-price{
+	font-size: 2.5rem;
+}
+.btn-text{
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size: 2.0rem;
+}
+.test-btn{
+	margin-bottom: 10%;
+}
+.btn{
+	font: inherit;
+	border-radius: 5px;
+	height: 12vh;
+	width: 19vw;
+	border: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2.2vh;
+	color: #fff;
+	cursor: pointer;
+}
+.btn-success{
+	color: #fff;
+	background-color: #42885f8c;
+	border-color: #42885f8a;
+	box-shadow: 0px 0px 30px rgba(36, 207, 64, 0.678);
+	transition: 0.2s;
+}
+.btn-success:hover{
+	color: #fff;
+	background-color: #166145e1;
+	box-shadow: 0px 0px 30px rgba(36, 207, 64, 0.678);
+	border-color: #166145e1;
+}
+.btn-warn{
+	width: 182px;
+	color: #fff;
+	background-color: #a17f2bbb;
+	border-color: #a17f2bbb;
+	box-shadow: 0px 0px 30px rgba(207, 181, 36, 0.678);
+	transition: 0.2s;
+}
+.btn-warn:hover{
+	color: #fff;
+	background-color: #795f1f;
+	box-shadow: 0px 0px 30px rgba(207, 181, 36, 0.493);
+	border-color: #795f1f;
+}
+.btn-danger{
+	color: #fff;
+	background-color: #942f26b7;
+	box-shadow: 0px 0px 30px rgba(207, 36, 36, 0.678);
+	border-color: #942f26b7;
+}
+.btn-danger:hover{
+	color: #fff;
+	background-color: #772821d8;
+	box-shadow: 0px 0px 30px rgba(207, 36, 36, 0.678);
+	border-color: #772821d8;
+}
+/* Vehicles Menu */
+
+#vehicle-container{
+	display: none;
+	text-transform: uppercase;
+	font-family: 'Barlow Condensed', sans-serif;
+	position: absolute;
+	bottom: 2%;
+	width: 100%;
+	text-align: center;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+}
+#vehicle-carousel{
+	width:90%;
+	margin:0px auto;
+}
+#vehicle-warp,#vehicle-class-warp{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.slick-slide{
+	margin:10px;
+}
+#vehicle-container .slick-dots li button:before {
+	font-size:20px;
+	color:white;
+}
+.category {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background-color: rgba(10, 10, 10, 0.781);
+	line-height: 100px;
+	font-size: 1.5rem;
+	border-radius: 3px;
+	border-bottom: 3px solid #929292;
+	transition: 0.4s;
+} 
+.category:hover {
+	border-bottom: 3px solid #c9c9c9;
+}
+.category5,.vehicle-class5 {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background-color: rgba(10, 10, 10, 0.781);
+	line-height: 100px;
+	width: 326px;
+	font-size: 1.5rem;
+	border-radius: 3px;
+	border-bottom: 3px solid #929292;
+	transition: 0.4s;
+}
+.category5:not(:first-of-type),.vehicle-class5:not(:first-of-type) {
+	margin-left: 20px;
+}
+.vehicle-class5:last-of-type{
+	margin-right: 20px;
+}
+.vehicle-class5:first-of-type{
+	margin-left: 20px;
+}
+.category5:hover,.vehicle-class5:hover {
+	border-bottom: 3px solid #c9c9c9;
+	
+}
+.category-price{
+	line-height: 0;
+	font-size: 1.15rem;
+	color: rgb(255, 255, 255);
+	transform: translate(-6px,-88px);
+	text-align: right;
+}
+.slick-dots li button {
+	display: none;
+}
+
+/* Vehicle Statistics */
+#statistics-warp{
+	position: absolute;
+	right: 5%;
+	top: 8%;
+	width: 320px;
+	height: 0px;
+}
+#statistics-container{
+	display: none;
+	font-family: "Barlow Condensed", sans-serif;
+	background-color: rgba(10, 10, 10, 0.781);
+	border-radius: 4px;
+	height: 250px;
+	font-size: 1.2rem;
+	z-index: -1;
+}
+.vehicle-stat{
+	margin-left: 15px;
+	height: auto;
+	margin-top: 17px;
+}
+.stat-name{
+	margin-left: 1px;
+	font-size: 1.3rem;
+}
+.stat-progress{
+	width: 80%;
+	height: 8px;
+	background-color: #43577a3d;
+}
+.prog-line{
+	width: 70%;
+	height: 8px;
+	background-color: #c7c7c7;
+}
+.stat-progress-container{
+	display: flex;
+	align-items: center;
+}
+.prog-num{
+	margin-left: 9px;
+	font-size: 1.1rem;
+}
+
+@media (max-width: 1280px) {
+	#statistics-container{
+		width: 300px;
+		height: 200px;
+	}
+}
+
+/* Vehicle Class Category */
+
+#vehicle-class-container{
+	display: none;
+	text-transform: uppercase;
+	font-family: 'Barlow Condensed', sans-serif;
+	position: absolute;
+	bottom: 2%;
+	width: 100%;
+	text-align: center;
+	left: 50%;
+	transform: translateX(-50%);
+}
+#vehicle-class-carousel{
+	width:90%;
+	margin:0px auto;
+}
+#vehicle-class-container .slick-dots li button:before {
+	font-size:20px;
+	color:white;
+}
+.vehicle-class,.vehicle-class5{
+	line-height: 120px;
+	font-size: 1.6rem;
+	border-radius: 3px;
+	background-color: rgba(0, 0, 0, 0.678);
+	border-bottom: 4px solid #949494;
+	transition: 0.4s;
+}
+.vehicle-class:hover,.vehicle-class5:hover {
+	border-bottom: 3px solid #bdbdbd;
+	
+}
+
+/* Vehicle Class Title */
+
+#vehicle-class-title-container{
+	display: none;
+	font-family: "Barlow Condensed", sans-serif;
+	width: 97%;
+	height: 30%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+}
+#vehicle-class-title-vehicleinfo{
+	padding: 50px 50px 50px 68px;
+	text-transform: uppercase;
+}
+#vehicle-class-title-vehiclename{
+	font-family: 'Barlow Condensed', sans-serif;
+	text-shadow: 3px 3px 6px rgba(0,0,0,0.69);
+	font-size: 4.0rem;
+}
+
+#vehicle-class-title-vehiclecategory{
+	font-size: 2.0rem;
+	color: #979797;
+	margin-top: -15px;
+}
+
+#colors-container{
+	width: 320px;
+	height: 25px;
+	border-radius: 4px;
+	font-size: 2.5rem;
+	display: flex;
+	align-content: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+#colors-button{
+	display: none;
+	font-family: "Barlow Condensed", sans-serif;
+	margin-top: 10px;
+	width: 320px;
+	line-height: 50px;
+	border-radius: 4px;
+	font-size: 1.5rem;
+	background-color: rgba(10, 10, 10, 0.781);
+	text-align: center;
+	transition: background-color 0.2s ease,top 0.4s linear;
+	z-index: -1;
+}
+
+#colors-button:hover{
+	background-color: #1e2531;
+}
+
+#colors-title{
+	font-size: 2.0rem;
+	text-align: center;
+	border-bottom: 2px solid #bdbdbd;
+}
+
+.color {
+	position: relative;
+	height: 120%;
+	width: 10.0%;
+	background-color: black;
+	margin: 3px;
+	border: 1px solid black;
+}
+
+.daily-icon{
+	color: white;
+	font-size: 1.8rem;
+	text-align: right;
+}
+
+#rn {
+	margin: 0;
+}
+
+/* .color:not(:first-of-type){
+	margin-left: 5px;
+} */
+#slider-container{
+	display: block;
+	font-family: 'Barlow Condensed', sans-serif;
+	font-size: 1.2rem;
+	position: absolute;
+	transform: translateX(-50%);
+	left: 50%;
+	font-size: 2.0rem;
+}
+
+.range {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	width: 500px;
+}
+#slider{
+	transform: rotate(180deg);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	-webkit-appearance: none;
+	background: rgba(10, 10, 10, 0.781);
+	height: 2px;
+}
+input[type=range]:focus {
+	outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border: 1px solid;
+	border-radius: 50%;
+	height: 25px;
+	width: 25px;
+	max-width: 80px;
+	position: relative;
+	bottom: 11px;
+	background-color: rgba(10, 10, 10, 0.781);
+	cursor: -webkit-grab;
+
+	-webkit-transition: border 1000ms ease;
+	transition: border 1000ms ease;
+}
+.range.blue::-webkit-slider-thumb {
+	border-color: #c7c7c7;
+}
+
+.range.ltpurple::-webkit-slider-thumb {
+	border-color: #c7c7c7;
+}
+#hide-button{
+	display: none;
+	font-family: "Barlow Condensed", sans-serif;
+	width: 320px;
+	margin-top: 2px;
+	
+	line-height: 50px;
+	border-radius: 4px;
+	font-size: 1.5rem;
+	background-color: rgba(10, 10, 10, 0.781);
+	text-align: center;
+	transition: background-color 0.2s ease,margin-top 0.4s linear;
+	z-index: -1;
+}
+#hide-button:hover{
+	background-color: rgba(10, 10, 10, 0.918);   
+}
+.color-icon{
+	display: none;
+	position: absolute;
+	bottom: 1%;
+	right: 2%;
+	font-size: 1.0rem;
+}
+#buy-vehicle,#test-drive-container{
+	position: absolute;
+	transform: translate(-50%,-50%);
+	font-family: "Barlow Condensed", sans-serif;
+	top: -600px;
+	left: 50%;
+	width: 540px;
+	height: 330px;
+	background-color: rgba(10, 10, 10, 0.781);
+	transition: top 0.5s;
+	z-index: 1;
+}
+#title-buy-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	width: 97%;
+	margin: 0 auto;
+}
+#buy-details,#test-details{
+	width: 97%;
+	margin: 10px auto;
+	font-size: 1.3rem;
+	display: flex;
+
+	justify-content: space-evenly;
+}
+#buy-offer,#test-offer{
+	margin: 5px;
+	font-size: 1.7rem;
+}
+#buy-date{
+	margin: 5px;
+	font-size: 1.1rem;
+	color: grey;
+}
+.detail,.test-detail{
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(10, 10, 10, 0.781);
+	width: 120px;
+	height: 120px;
+	border-radius: 2px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.detail-info{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+	width: 120px;
+	display: block;
+	overflow: hidden
+}
+#buy-down,#test-down{
+	text-align: center;
+	
+	width: 65%;
+	margin: 21px auto;
+}
+#buy-text,#test-text{
+	font-size: 1.4rem;
+}
+#buy-buttons,#test-buttons{
+	display: flex;
+	position: absolute;
+	transform: translateX(-50%);
+	left: 50%;
+	top: 79%;
+}
+
+.buy-button,.test-button{
+	font: inherit;
+	border-radius: 2px;
+	width: 120px;
+	height: 45px;
+	border: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	color: #fff;
+	cursor: pointer;
+	background-color: rgb(16, 17, 19);
+}
+
+#buy,#test-accept{
+	margin-left: 0.5px;
+	background-color: rgb(16, 17, 19);
+}
+#buy:hover,#test-accept:hover{
+	border-bottom: 2px solid #363f4d;
+	
+}
+#back,#test-back{
+	margin-right: 10px;
+	background-color: rgb(16, 17, 19);
+}
+#back:hover,#test-back:hover{
+	border-bottom: 2px solid #363f4d;
+}
+#main{
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	opacity: 0.5;
+	z-index: 1;
+}
+#buy-notify{
+	display: none;
+	font-family: "Barlow Condensed", sans-serif;
+	font-size: 3.0rem;
+	color: #ffffff;
+	margin: 40px;
+}
+#drawmarker-container{
+	font-family: "Barlow Condensed", sans-serif;
+	position: absolute;
+	left: -260px;
+	top: 50%;
+	font-size: 1.5rem;
+	color: white;
+	padding: 10px;
+	background: #5395ff;
+	border-radius: 8px;
+	transition: left 0.3s ease;
+}
+#test-drive-timer{
+	display: none;
+	font-family: "Barlow Condensed", sans-serif;
+	position: absolute;
+	bottom: 12%;
+	right: 1%;
+	font-size: 4.0rem;
+}
+#timer{
+	color: white;
+	font-weight: bold;
+}
