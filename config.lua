@@ -415,8 +415,8 @@ Config.BuyVehicleFunc = function(QBCore,vehicleEntity,vehicleName)
     local vehicleProps = QBCore.Functions.GetVehicleProperties(vehicleEntity)
     local model = GetEntityModel(vehicleEntity)
     vehicleProps.displayName = vehicleName
-    --TriggerEvent("vehiclekeys:client:SetOwner", GetVehicleNumberPlateText(vehicleEntity), vehicleEntity)
-    TriggerServerEvent('nkoVehicle:server:BuyVehicle', GetVehicleNumberPlateText(vehicleEntity), GetLabelText(GetDisplayNameFromVehicleModel(model)))
+    TriggerEvent("vehiclekeys:client:SetOwner", GetVehicleNumberPlateText(vehicleEntity), vehicleEntity)
+    --TriggerServerEvent('nkoVehicle:server:BuyVehicle', GetVehicleNumberPlateText(vehicleEntity), GetLabelText(GetDisplayNameFromVehicleModel(model)))
     TriggerServerEvent('rn-vehicleshop:setVehicleOwned', vehicleProps)
 end
 
