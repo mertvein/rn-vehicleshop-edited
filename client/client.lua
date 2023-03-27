@@ -1,5 +1,6 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 local nuiMsg = false
+local pedSpawned = false
 
 local function whenStarted()
     if Config.Blip.showBlip then
@@ -15,6 +16,12 @@ local function whenStarted()
         EndTextCommandSetBlipName(blip)
     end
 
+    if pedSpawned then return end
+    local current = 'a_m_m_business_01'
+    current = type(current) == 'string' and GetHashKey(current) or current
+    RequestModel(current)
+
+    while not HasModelLoaded(current) do Wait(0) end
     GalleryPed = CreatePed(0, 'a_m_m_business_01', -32.99, -1103.64, 25.42, 67.84, false, false)
     TaskStartScenarioInPlace(GalleryPed, 'WORLD_HUMAN_COP_IDLES', true)
     FreezeEntityPosition(GalleryPed, true)
@@ -32,6 +39,7 @@ local function whenStarted()
         },
         distance = 2.0
     })
+    pedSpawned = true
 end
 
 RegisterNetEvent('rn-vehicleshop:target')
