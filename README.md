@@ -2,9 +2,6 @@
 - Advanced Buying Cars [QBCORE]
 - New QBCore
 
-## Photo Showcase
-![image](https://cdn.discordapp.com/attachments/1089687332791267369/1089687551436128296/npc.png)
-![image](https://cdn.discordapp.com/attachments/1089687332791267369/1089688201838461079/gallery.png)
 ## Discord
 - https://discord.gg/nko
 
