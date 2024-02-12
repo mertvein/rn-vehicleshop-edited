@@ -24,6 +24,7 @@
 ### Installation
 - Download the script and put it in the your resource directory.
 - Add the following code to your server.cfg/resources.cfg
+- Remove "-edited" from folder name. "rn-vehicleshop"
 ```
 ensure rn-vehicleshop
 ```
